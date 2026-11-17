@@ -46,7 +46,7 @@ docker compose exec php php artisan orchid:link
 docker compose exec php php artisan orchid:admin <name> <email> <password>
 ```
 
-The `php` and `node` services in `docker-compose.yml` reference images from a private registry; replace them with public PHP-FPM 8.0 and Node.js images before starting.
+The `php` and `node` services use the official `php:8.0-fpm` and `node:15-alpine` images. The official PHP image has no `pdo_mysql` extension, so add it (`docker-php-ext-install pdo_mysql`) in your own image before running migrations.
 
 Without Docker:
 
