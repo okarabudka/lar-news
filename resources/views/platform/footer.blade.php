@@ -1,5 +1,5 @@
 @guest
-    <p>Kelnik Studios</p>
+    <p>Lar News</p>
 @else
     <div class="text-center user-select-none">
         <p class="small m-0">
